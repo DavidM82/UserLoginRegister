@@ -1,0 +1,8 @@
+This project uses Hibernate to demonstrate a user login/register application.
+There are two main parts to this application, registering a user and logging in as a user.
+
+1. Register a user
+	By clicking on reigster link on the index page, the application presents 3 fields all of which must be filled in before the form is accepted, a name, an email and a password. On clicking submit, the application creates a new user using these three fields and saves it to the database. Once this works, the application returns a success message and a link back to the index page.
+	
+2. Log in
+	Clicking on log in link on the index page takes you to a form requesting your email and password and won't proceed until you fill those in. Once the application has a email and password, it does a query search looking through the table with two where clauses, that the email exists in the table, AND that the password exists in the table. This will return any rows that meets those two criteria. If the email/password combo exists in the table, the application presents a landing page. If the combination doesn't exist, then teh application refreshes the login form, wiping both fields blank.
